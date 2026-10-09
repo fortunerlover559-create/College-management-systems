@@ -1,0 +1,106 @@
+{
+    "teacher": [
+        {
+            "name": "arslan",
+            "phon number": 84561364,
+            "Age": 18,
+            "Class": "bs",
+            "subject name": "pf"
+        },
+        {
+            "name": "asif",
+            "phon number": 65132365,
+            "Age": 56,
+            "Class": "mphil",
+            "subject name": "history"
+        },
+        {
+            "name": "shahroz",
+            "phon number": 564985,
+            "Age": 18,
+            "Class": "bs",
+            "subject name": "ds"
+        },
+        {
+            "name": "arslan",
+            "phon number": 7984664585,
+            "Age": 18,
+            "Class": "bs",
+            "subject name": "pf"
+        },
+        {
+            "name": "sdfgh",
+            "phon number": 864523,
+            "Age": 56,
+            "Class": "dsfgfg",
+            "subject name": "aict"
+        },
+        {
+            "name": "Hussnain",
+            "phon number": 9876543,
+            "Age": 17,
+            "Class": "a",
+            "subject name": "cys"
+        },
+        {
+            "name": "dedefs",
+            "phon number": 1233,
+            "Age": 18,
+            "Class": "math",
+            "subject name": "a"
+        }
+    ],
+    "student": [
+        {
+            "name": "sharoz",
+            "roll number": 55,
+            "Age": 18,
+            "Class": "ds",
+            "subject name": "pf",
+            "marks": 56,
+            "CGPA": 3,
+            "Adress": "halia town"
+        },
+        {
+            "name": "arslan",
+            "roll number": 12,
+            "Age": 18,
+            "Class": "pf",
+            "subject name": "ac",
+            "marks": 18,
+            "CGPA": 2,
+            "Adress": "adsfghjk"
+        },
+        {
+            "name": "arslan",
+            "roll number": 16,
+            "Age": 19,
+            "Class": "bs",
+            "subject name": "aict",
+            "marks": 25,
+            "CGPA": 4,
+            "Adress": "abcd"
+        },
+        {
+            "name": "Hussnain",
+            "roll number": 100,
+            "Age": 17,
+            "Class": "A",
+            "subject name": "che",
+            "marks": 12345,
+            "CGPA": 4,
+            "Adress": "hgfd",
+            "Address": "ertyuio"
+        },
+        {
+            "name": "adsasdfg",
+            "roll number": 18,
+            "Age": 19,
+            "Class": "awsdrftyg",
+            "subject name": "sdfghj",
+            "marks": 8946,
+            "CGPA": 4,
+            "Adress": "aert"
+        }
+    ]
+}
