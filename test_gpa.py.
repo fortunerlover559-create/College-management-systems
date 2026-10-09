@@ -1,0 +1,15 @@
+# test_gpa.py
+import unittest
+from gpa_calculator import calculate_gpa
+
+class TestGpaSystem(unittest.TestCase):
+    
+    def test_excellent_student_gpa(self):
+        # We test if 90 marks correctly returns a 4.0 GPA
+        result = calculate_gpa(90)
+        self.assertEqual(result, 4.0)
+
+    def test_passing_student_gpa(self):
+        # We test if 70 marks correctly returns a 3.0 GPA
+        result = calculate_gpa(70)
+        self.assertEqual(result, 3.0)
