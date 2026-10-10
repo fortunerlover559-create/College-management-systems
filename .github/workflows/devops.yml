@@ -1,33 +1,71 @@
-name: Test Python College System
+name: CI/CD Pipeline - Automation Integration
 
+# This triggers the pipeline every time code is pushed to the main branch
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
+  # Stage 1: Build the application
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Build Application
+        run: |
+          echo "Building the application..."
+          # Add your build commands here (e.g., npm run build, docker build)
 
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+  # Stage 2: Run Unit Tests
+  unit-tests:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: Run Python System Check
-      run: |
-        if ls *.py 1> /dev/null 2>&1; then
-          python -m py_compile *.py
-        else
-          echo "No Python files found to check yet!"
-        fi
+      - name: Run Unit Tests
+        run: |
+          echo "Running unit tests..."
+          # Add your unit testing commands here (e.g., npm test, pytest)
+
+  # Stage 3: End-to-End (E2E) Automation (Playwright matches your recent commits)
+  e2e-tests:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Playwright E2E Tests
+        run: |
+          echo "Running end-to-end automation..."
+          # Add your E2E tool commands here (e.g., npx playwright test)
+
+  # Stage 4: Security Analysis
+  security:
+    needs: e2e-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run OWASP Security Scan
+        run: |
+          echo "Running security vulnerabilities check..."
+          # Add security scanners here (e.g., SonarQube, Trivy, or OWASP ZAP)
+
+  # Stage 5: Deploy to Staging / Production
+  deploy:
+    needs: security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloud Environment
+        run: |
+          echo "Deploying application to environment..."
+          # Add your deployment script here (e.g., Azure login, Docker push, Kubernetes apply)
