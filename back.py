@@ -1,7 +1,7 @@
 import json
 import os
 
-def Admin_login_check()
+def Admin_login_check():
     with open("password.json","r") as f:
         data =json.load(f) 
     
